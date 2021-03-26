@@ -20,10 +20,6 @@ jobs:
           python3 -m pip install -U pip
           python3 -m pip install -U pytest
           cd D:/a/pynauty/pynauty
-          ls -alF
-          echo $PATH
-          which -a bash
-          which -a sh
           make pynauty
           make minimal-test
         shell: C:\tools\cygwin\bin\bash.exe --login --norc -eo pipefail -o igncr '{0}'
