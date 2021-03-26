@@ -1,6 +1,10 @@
 name: Build in Cygwin
 on:
-  workflow_dispatch:
+  push:
+    branches: [ cygwin-build ]
+  pull_request:
+    branches: [ cygwin-build ]
+
 jobs:
   build:
     runs-on: windows-latest
@@ -18,7 +22,9 @@ jobs:
           python3 -m pip install -U pytest
           gcc --version
           make --version
+          pwd
           ls -alF
+          ls -alF D:/a/pynauty/pynauty
           make
           make pynauty
           make minimal-test
