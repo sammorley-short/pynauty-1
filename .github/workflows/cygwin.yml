@@ -25,6 +25,9 @@ jobs:
           find /usr/include -name Python.h
           cp /usr/include/python3.8/Python.h src/nauty27r1
           cp /usr/include/python3.8/Python.h src/pynauty
+          cp /usr/include/python3.8/patchlevel.h src/pynauty
+          cp /usr/include/python3.8/pyconfig.h src/pynauty
+          cp /usr/include/python3.8/pymacconfig.h src/pynauty
           echo ==============================================
           make pynauty
           make minimal-test
