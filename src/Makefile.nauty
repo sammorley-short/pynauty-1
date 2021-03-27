@@ -14,6 +14,7 @@ nauty-config: $(NAUTY_DIR)/config.log
 $(NAUTY_DIR)/config.log:
 	cd $(NAUTY_DIR); dos2unix -f configure
 	cd $(NAUTY_DIR); dos2unix -f config.sub
+	cd $(NAUTY_DIR); dos2unix -f config.guess
 	cd $(NAUTY_DIR); /usr/bin/sh ./configure CFLAGS='-O4 -fPIC'
 
 nauty-objects: nauty-config
