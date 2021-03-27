@@ -22,10 +22,9 @@ jobs:
           cd D:/a/pynauty/pynauty
           echo ==============================================
           echo shell $SHELL
-          which -a sh bash
-          ls -ld /bin/sh /bin/bash
-          ls -ld /usr/include/python3.8/*
           find /usr/include -name Python.h
+          cp /usr/include/python3.8/Python.h src/nauty27r1
+          cp /usr/include/python3.8/Python.h src/pynauty
           echo ==============================================
           make pynauty
           make minimal-test
