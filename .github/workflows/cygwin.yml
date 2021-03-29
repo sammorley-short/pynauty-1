@@ -21,7 +21,9 @@ jobs:
           python3 -m pip install -U pytest
           cd D:/a/pynauty/pynauty
           echo ==============================================
+          ln -s /usr/include src/pynauty/include
           find /usr/include -name Python.h
+          find src/pynauty/include/ -name Python.h
           echo ==============================================
           make pynauty
           make minimal-test
