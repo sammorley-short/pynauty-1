@@ -64,7 +64,10 @@ ext_pynauty = Extension(
                           nauty_dir + '/' + 'schreier.o',
                           nauty_dir + '/' + 'naurng.o',
                         ],
-        include_dirs = [ nauty_dir, pynauty_dir ]
+        include_dirs = [ nauty_dir, pynauty_dir,
+                         'src/pynauty/include',
+                         'src/pynauty/include/python3.8',
+                       ]
     )
 ext_modules = [ ext_pynauty ]
 
