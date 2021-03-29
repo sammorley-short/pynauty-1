@@ -65,9 +65,8 @@ ext_pynauty = Extension(
                           nauty_dir + '/' + 'naurng.o',
                         ],
         include_dirs = [ nauty_dir, pynauty_dir,
-                         'src/pynauty/include/python3.8',
-                         'src/pynauty/include/sys',
-                         'src/pynauty/include',
+                        'C:/tools/cygwin/include/python3.8',
+                        'C:/tools/cygwin/include',
                        ]
     )
 ext_modules = [ ext_pynauty ]
